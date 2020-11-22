@@ -1,0 +1,39 @@
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System;
+
+namespace _05_Classes
+{
+    [TestClass]
+    public class ClassesTest
+    {
+        [TestMethod]
+        public void CookieTests()
+        {
+            Cookie cookie = new Cookie();
+            cookie.Name = "Snickerdoodle";
+            cookie.HasNuts = false;
+
+            Cookie anotherCookie = new Cookie();
+            anotherCookie.Name = "Sugar";
+            anotherCookie.GramsOfFlour = 10;
+
+            Cookie snickerdoodle = new Cookie("Snickerdoodle", false, 11.5);
+            Cookie newCookie = new Cookie("Peanut Butter", true, 150);
+
+        }
+
+        [TestMethod]
+        public void VehicleTests()
+        {
+            Vehicle sedan = new Vehicle();
+            sedan.TypeOfVehicle = VehicleType.Sedan;
+
+            Vehicle newCar = new Vehicle
+            {
+                TypeOfVehicle = VehicleType.Motorcycle,
+                Make = "Harley Davidson",
+                Model = "FXD"
+            };
+        }
+    }
+}
